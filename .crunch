@@ -1,0 +1,132 @@
+{
+	"files": {
+		"bootstrap-3.3.6/less/bootstrap.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../../bootstrap.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourcemap": true
+					}
+				}
+			],
+			"sources": [
+				"mixins/nav-vertical-align.less",
+				"wells.less",
+				"mixins/opacity.less",
+				"alerts.less",
+				"mixins/pagination.less",
+				"breadcrumbs.less",
+				"mixins/panels.less",
+				"buttons.less",
+				"mixins/progress-bar.less",
+				"close.less",
+				"mixins/reset-filter.less",
+				"component-animations.less",
+				"mixins/reset-text.less",
+				"forms.less",
+				"mixins/resize.less",
+				"grid.less",
+				"mixins/responsive-visibility.less",
+				"jumbotron.less",
+				"mixins/size.less",
+				"list-group.less",
+				"mixins/tab-focus.less",
+				"mixins.less",
+				"mixins/table-row.less",
+				"mixins/background-variant.less",
+				"mixins/text-emphasis.less",
+				"mixins/buttons.less",
+				"mixins/text-overflow.less",
+				"mixins/clearfix.less",
+				"mixins/vendor-prefixes.less",
+				"mixins/gradients.less",
+				"modals.less",
+				"mixins/grid.less",
+				"navbar.less",
+				"mixins/image.less",
+				"navs.less",
+				"mixins/list-group.less",
+				"normalize.less",
+				"badges.less",
+				"pager.less",
+				"carousel.less",
+				"pagination.less",
+				"dropdowns.less",
+				"panels.less",
+				"input-groups.less",
+				"popovers.less",
+				"media.less",
+				"print.less",
+				"mixins/border-radius.less",
+				"progress-bars.less",
+				"mixins/forms.less",
+				"responsive-embed.less",
+				"mixins/hide-text.less",
+				"responsive-utilities.less",
+				"mixins/nav-divider.less",
+				"scaffolding.less",
+				"code.less",
+				"tables.less",
+				"labels.less",
+				"thumbnails.less",
+				"mixins/center-block.less",
+				"mixins/labels.less",
+				"variables.less",
+				"utilities.less",
+				"type.less",
+				"tooltip.less",
+				"button-groups.less",
+				"mixins/grid-framework.less",
+				"mixins/alerts.less",
+				"glyphicons.less"
+			]
+		},
+		"bootstrapMeWe.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "bootstrapMeWe.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourcemap": true
+					}
+				}
+			],
+			"sources": [
+				"less/main.less",
+				"less/responsive.less"
+			]
+		},
+		"style/bootstrapMeWe.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "bootstrapMeWe.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourcemap": true
+					}
+				}
+			],
+			"sources": [
+				"main.less",
+				"responsive.less",
+				"xs-style.less"
+			]
+		}
+	}
+}

@@ -1,0 +1,242 @@
+/*
+#######################
+######## Autoren: Nico Lassen, Joel Krauleidies, Felix Ohlsen
+######## Projektname: MeWe
+######## Modul: Medieninformatik
+######## Jahr: 2015
+#######################
+*/
+/* Variabeln */
+/* Effekte */
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.shadowOne {
+  -webkit-box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
+}
+/* Allgemeine Anapssungen */
+html {
+  height: 100%;
+}
+html body {
+  background: #000000 url("../img/bg.jpg") repeat-x fixed !important;
+  height: 100%;
+}
+html body .menuButton {
+  position: absolute;
+  right: 12px;
+  top: 17px;
+}
+html body .menuButton img {
+  height: 35px;
+}
+html body #sidr #menuHeader h1 {
+  font-size: 15px;
+  padding: 5px 15px;
+}
+html body #sidr p {
+  margin-left: 12px;
+}
+html body #wrapper #loginScreen {
+  margin-top: 150px;
+}
+html body #wrapper #loginScreen #einleitungsText p {
+  color: #fff;
+}
+html body #wrapper #loginScreen .panel {
+  color: #fff;
+  border-radius: 0px;
+  border: 0px;
+  background-color: #333333;
+}
+html body #wrapper #loginScreen .panel-info > .panel-heading {
+  background-color: #3765d0;
+  color: #fff;
+  border-color: #064792;
+  border-radius: 0px;
+  height: 40px;
+}
+html body #wrapper #loginScreen .panel-info > .panel-footer {
+  background-color: #3765d0;
+  color: #fff;
+  border-color: #064792;
+  border-radius: 0px;
+  height: 40px;
+}
+html body #wrapper #loginScreen .panel-body {
+  height: 100%;
+}
+html body #wrapper #loginScreen .panel-body .hvr-grow:hover {
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+}
+html body #wrapper #loginScreen .panel-body img {
+  margin-bottom: 10px;
+}
+html body #wrapper #loginBox {
+  -webkit-box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
+}
+html body #wrapper #loginBox .btn-default {
+  border-radius: 0px;
+  border: none;
+}
+html body #mainCalendar #botCal table {
+  margin-bottom: 1px;
+}
+html body #mainCalendar #botCal table tr {
+  height: 50px;
+}
+html body #mainCalendar #botCal table th {
+  border: none;
+}
+html body #mainCalendar #botCal table td {
+  border: none;
+}
+html body #mainCalendar #botCal .timeList {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+}
+html body #mainCalendar #botCal #tableMe {
+  background-color: transparent;
+}
+html body #mainCalendar #botCal .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(249, 249, 249, 0.3);
+}
+html body #mainCalendar #botCal > .personOne {
+  padding-top: 15px;
+  margin-bottom: 5px;
+}
+html body #mainCalendar #botCal > .personOne td {
+  background-color: #79f27f;
+}
+html body #mainCalendar #botCal > .personOne .terminActive {
+  background-color: transparent;
+}
+html body #mainCalendar #botCal > .personTwo {
+  padding-top: 15px;
+  margin-bottom: -5px;
+}
+html body #mainCalendar #botCal > .personTwo td {
+  background-color: #f75555;
+}
+html body #mainCalendar #botCal > .personTwo .terminActive {
+  background-color: transparent;
+}
+html body #mainCalendar #botCal > .personThree {
+  padding-top: 15px;
+}
+html body #mainCalendar #botCal > .personThree td {
+  background-color: #f7f155;
+}
+html body #mainCalendar #botCal > .personThree .terminActive {
+  background-color: transparent;
+}
+html #topCal {
+  width: 100%;
+  height: 80px;
+  border-bottom: 3px solid #3765d0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+html #topCal .topShadow {
+  top: 2px;
+  z-index: -1;
+}
+html #topCal #caldenderPerson {
+  height: 100%;
+  max-width: 970px;
+}
+html #topCal #caldenderPerson .col-xs-3,
+html #topCal #caldenderPerson .col-xs-2 {
+  height: 100%;
+}
+html #topCal #caldenderPerson .col-xs-3 > span,
+html #topCal #caldenderPerson .col-xs-2 > span {
+  height: 60px;
+  width: 60px;
+  margin-top: 8px;
+}
+html #topCal #caldenderPerson .col-xs-3 > span.personOne,
+html #topCal #caldenderPerson .col-xs-2 > span.personOne {
+  background-color: #79f27f;
+}
+html #topCal #caldenderPerson .col-xs-3 > span.personTwo,
+html #topCal #caldenderPerson .col-xs-2 > span.personTwo {
+  background-color: #f75555;
+}
+html #topCal #caldenderPerson .col-xs-3 > span.personThree,
+html #topCal #caldenderPerson .col-xs-2 > span.personThree {
+  background-color: #f7f155;
+}
+html #topCal #caldenderPerson .col-xs-3 > span.personFour,
+html #topCal #caldenderPerson .col-xs-2 > span.personFour {
+  background-color: #b855f7;
+}
+html #topCal #caldenderPerson .col-xs-3 .glyphicon,
+html #topCal #caldenderPerson .col-xs-2 .glyphicon {
+  font-size: 37px;
+  margin-top: 10px;
+  margin-left: 12px;
+  color: black;
+}
+/* testest */
+@media (max-width: 766px) {
+  html #topCal {
+    height: 60px;
+  }
+  html #topCal .menuButton img {
+    height: 25px;
+  }
+  html #topCal #caldenderPerson .col-xs-3 > span,
+  html #topCal #caldenderPerson .col-xs-2 > span {
+    height: 40px;
+    width: 40px;
+  }
+  html #topCal #caldenderPerson .col-xs-3 > span.personOne,
+  html #topCal #caldenderPerson .col-xs-2 > span.personOne {
+    background-color: #79f27f;
+  }
+  html #topCal #caldenderPerson .col-xs-3 > span.personTwo,
+  html #topCal #caldenderPerson .col-xs-2 > span.personTwo {
+    background-color: #f75555;
+  }
+  html #topCal #caldenderPerson .col-xs-3 > span.personThree,
+  html #topCal #caldenderPerson .col-xs-2 > span.personThree {
+    background-color: #f7f155;
+  }
+  html #topCal #caldenderPerson .col-xs-3 > span.personFour,
+  html #topCal #caldenderPerson .col-xs-2 > span.personFour {
+    background-color: #b855f7;
+  }
+  html #topCal #caldenderPerson .col-xs-3 .glyphicon,
+  html #topCal #caldenderPerson .col-xs-2 .glyphicon {
+    font-size: 25px;
+    margin-top: 6px;
+    margin-left: 8px;
+    color: black;
+  }
+}
+
+/*# sourceMappingURL=bootstrapMeWe.css.map */

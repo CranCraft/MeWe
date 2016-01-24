@@ -1,0 +1,253 @@
+/*
+#######################
+######## Autoren: Nico Lassen, Joel Krauleidies, Felix Ohlsen
+######## Projektname: MeWe
+######## Modul: Medieninformatik
+######## Jahr: 2015
+#######################
+*/
+
+
+/* Variabeln */
+
+//Hintergrundfarbe
+@color1: #000000; //Schwarz
+@color7: #25292b; //Grau
+@color8: #333333; //Grau 2
+//Überschrift/Logo
+@color2: #3765D0; //Blau (old: 0c4db9)
+@color9: #064792; //Blau Border Color
+//PersonenRoadline
+@color3: #ff5b00; //Orange
+@color4: #ff0066; //Pink
+@color5: #ffcc1c; //Gelb
+@color6: #00ff0c; //Grün
+//Schriftgrößen
+@size1: 20px; //Überschriften
+@size2: 14px; //Text
+@size3: 10px; //Unterschriften
+
+@color10: #79f27f; 
+@color11: #f75555; //Rot
+@color12: #f7f155;
+@color13: #b855f7;
+
+/* Effekte */
+/* Grow */
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.shadowOne {
+    -webkit-box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
+}
+/* Allgemeine Anapssungen */
+
+html {
+    height: 100%;
+    body {
+        background: #000 url("../img/bg.jpg") repeat-x fixed !important;
+        height: 100%;
+        
+        #loginMenu{
+            //position: fixed;    
+        }
+        
+        .menuButton {
+            position: absolute;
+            right: 12px;
+            top: 17px;
+            img {
+                height: 35px;
+            }
+        }
+        #sidr {
+            #menuHeader {
+                h1 {
+                    font-size: 15px;
+                    padding: 5px 15px;
+                }
+            }
+            p {
+                margin-left: 12px;
+            }
+        }
+
+        #wrapper {
+            #loginScreen {
+                margin-top: 150px;
+                #einleitungsText {
+                    p {
+                        color: #fff;
+                    }
+                }
+                .panel {
+                    color: #fff;
+                    border-radius: 0px;
+                    border: 0px;
+                    background-color: @color8;
+                }
+                .panel-info>.panel-heading {
+                    background-color: @color2;
+                    color: #fff;
+                    border-color: @color9;
+                    border-radius: 0px;
+                    height: 40px;
+                }
+                .panel-info>.panel-footer {
+                    background-color: @color2;
+                    color: #fff;
+                    border-color: @color9;
+                    border-radius: 0px;
+                    height: 40px;
+                }
+                .panel-body {
+                    .hvr-grow:hover {
+                        -webkit-transform: scale(1.02);
+                        transform: scale(1.02);
+                    }
+                    height: 100%;
+                    img {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            #loginBox {
+                .shadowOne();
+                .btn-default {
+                    border-radius: 0px;
+                    border: none;
+                }
+            }
+        }
+        #mainCalendar {
+            #botCal {
+                table {
+                    //background-color: @color10;   
+                    //color: #fff;
+                    margin-bottom: 1px;
+                    tr {
+                        height: 50px;
+                    }
+                    th {
+                        border: none;
+                    }
+                    td {
+                        border: none;
+                    }
+                }
+                .timeList {
+                    background-color: rgba(255, 255, 255, 0.3) ; 
+                    padding-top: 15px;
+                 
+                }
+                #tableMe {
+                    background-color: transparent;    
+                }
+                .table-striped>tbody>tr:nth-of-type(odd) {
+                        background-color: rgba(249,249,249, 0.3);
+                    } 
+                > .personOne {
+                    padding-top: 15px;
+                    margin-bottom: 5px;
+                    td {
+                        background-color: @color10;
+                        
+                    }
+                    .terminActive {
+                      background-color: transparent; 
+                    } 
+                }
+                            > .personTwo {
+                    padding-top: 15px;
+                    margin-bottom: -5px;
+                    td {
+                        background-color: @color11;
+                        
+                    }
+                    .terminActive {
+                      background-color: transparent; 
+                    } 
+                }
+                            > .personThree {
+                    padding-top: 15px;
+                    td {
+                        background-color: @color12;
+                        
+                    }
+                    .terminActive {
+                      background-color: transparent; 
+                    } 
+                }
+            }
+        }
+    }
+            #topCal {
+            width: 100%;
+            height: 80px;
+            border-bottom: 3px solid @color2;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.7);
+            //overflow: hidden;
+            .topShadow {
+                top: 2px;
+                z-index: -1;
+            }
+            #caldenderPerson {
+                height: 100%;
+                max-width: 970px;
+                .col-xs-3, .col-xs-2 {
+                    height: 100%;
+                    > span {
+                        &.personOne {
+                            background-color: @color10;
+                        }
+                        &.personTwo {
+                            background-color: @color11;
+                        }
+                        &.personThree {
+                            background-color: @color12;
+                        }
+                        &.personFour {
+                            background-color: @color13;
+                        }
+                        height: 60px;
+                        width: 60px;
+                        margin-top: 8px;
+                        //border: 3px solid black;
+                    }
+                    .personName {
+                        
+                        }
+                    .personImage {
+                        
+                        }
+                    .glyphicon {
+                        font-size: 37px;
+                        margin-top: 10px;
+                        margin-left: 12px;
+                        color: black;
+                    }
+                }
+            }
+        }
+}
