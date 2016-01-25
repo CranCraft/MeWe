@@ -1,29 +1,50 @@
-<script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
-<script>
-	function redirectCheck(pageurl) {
-		if (!window.location.href.endsWith(pageurl)) {
-			window.location.href = pageurl;
-		}
-	}
+$(window).load(function(){
+$("#topCal").sticky({ topSpacing: 0 });
+});
 
-	function signOut() {
-		var auth2 = gapi.auth2.getAuthInstance();
-		auth2.signOut().then(function() {
-			console.log('User signed out.');
-		});
-	}
+function signOut() {
+var auth2 = gapi.auth2.getAuthInstance();
+auth2.signOut().then(function() {
+console.log('User signed out.');
+});
+}
 
-   	$(window).load(function(){
-      $("#topCal").sticky({ topSpacing: 0 });
+  $(".spoiler").spoiler();
+  
+$("ol.simple_with_animation").sortable({
+  group: 'simple_with_animation',
+  pullPlaceholder: false,
+  // animation on drop
+  onDrop: function  ($item, container, _super) {
+    var $clonedItem = $('<li/>').css({height: 0});
+    $item.before($clonedItem);
+    $clonedItem.animate({'height': $item.height()});
+
+    $item.animate($clonedItem.position(), function  () {
+      $clonedItem.detach();
+      _super($item, container);
     });
-    
-	$.getJSON("date.json", function(data2) {
-		$('#zeiten').graspSchedule(data2);
-	});
+  },
 
-	$(document).ready(function() {
-		$("#zeiten").wrap("<div class='new'></div>");
-	});
+  // set $item relative to cursor position
+  onDragStart: function ($item, container, _super) {
+    var offset = $item.offset(),
+        pointer = container.rootGroup.pointer;
+
+    adjustment = {
+      left: pointer.left - offset.left,
+      top: pointer.top - offset.top
+    };
+
+    _super($item, container);
+  },
+  onDrag: function ($item, position) {
+    $item.css({
+      left: position.left - adjustment.left,
+      top: position.top - adjustment.top
+    });
+  }
+});
 
 </script>
 </body>

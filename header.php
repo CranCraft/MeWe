@@ -16,6 +16,8 @@
 		<script src="js/calApi.js"></script>
 		<script src="plugins/garand-sticky/jquery.sticky.js"></script>
 		<script src="plugins/jquery.graspSchedule.js"></script>
+		<script src='plugins/jquery-sortable.js'></script>
+		<script src="plugins/jquery.spoiler.min.js"></script>
 
 
 		<!-- MeWe CSS -->

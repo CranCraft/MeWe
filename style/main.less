@@ -60,10 +60,84 @@
     -moz-box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
 }
+
+/* Sort Style */
+
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
+ol.example li.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+ol.example li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}
+
+li.placeholder {
+    list-style-type: none;
+}
+
 /* Allgemeine Anapssungen */
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+  border-style: solid none;
+  margin: 18px 0;
+}
+
+#einleitungsText {
+    &:hover {
+        cursor: pointer;
+    }
+}
 
 html {
     height: 100%;
+    margin-bottom: 1px;
+    .contentBox {
+        background-color: rgba(255, 255, 255, 0.3) ;  
+        border: 1px solid #333;
+        padding-top: 15px;
+        color: #fff;
+        margin-bottom: 37px;
+        .simple_with_animation li {
+            color: #000;
+        }
+        .btn-default {
+            background-color: @color2;
+            color: #fff;
+            border: none;
+            margin-bottom: 15px;
+            &:hover {
+                background-color: #213c7c;
+            }
+        }
+        li {
+            color: #fff;    
+        }
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+        :hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
     body {
         background: #000 url("../img/bg.jpg") repeat-x fixed !important;
         height: 100%;
@@ -88,7 +162,7 @@ html {
                 }
             }
             p {
-                margin-left: 12px;
+                margin: 12px;
             }
         }
 
@@ -96,6 +170,7 @@ html {
             #loginScreen {
                 margin-top: 150px;
                 #einleitungsText {
+                    padding: 10px;
                     p {
                         color: #fff;
                     }
@@ -214,7 +289,7 @@ html {
             }
             #caldenderPerson {
                 height: 100%;
-                max-width: 970px;
+                //max-width: 970px;
                 .col-xs-3, .col-xs-2 {
                     height: 100%;
                     > span {

@@ -34,9 +34,74 @@
   -moz-box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 63px 0px rgba(0, 0, 0, 0.75);
 }
+/* Sort Style */
+body.dragging,
+body.dragging * {
+  cursor: move !important;
+}
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+ol.example li.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+ol.example li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}
+li.placeholder {
+  list-style-type: none;
+}
 /* Allgemeine Anapssungen */
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #eeeeee -moz-use-text-color #ffffff;
+  border-style: solid none;
+  margin: 18px 0;
+}
+#einleitungsText:hover {
+  cursor: pointer;
+}
 html {
   height: 100%;
+  margin-bottom: 1px;
+}
+html .contentBox {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #333;
+  padding-top: 15px;
+  color: #fff;
+  margin-bottom: 37px;
+}
+html .contentBox .simple_with_animation li {
+  color: #000;
+}
+html .contentBox .btn-default {
+  background-color: #3765d0;
+  color: #fff;
+  border: none;
+  margin-bottom: 15px;
+}
+html .contentBox .btn-default:hover {
+  background-color: #213c7c;
+}
+html .contentBox li {
+  color: #fff;
+}
+html a {
+  color: #fff;
+  text-decoration: none;
+}
+html a :hover {
+  color: #fff;
+  text-decoration: none;
 }
 html body {
   background: #000000 url("../img/bg.jpg") repeat-x fixed !important;
@@ -55,10 +120,13 @@ html body #sidr #menuHeader h1 {
   padding: 5px 15px;
 }
 html body #sidr p {
-  margin-left: 12px;
+  margin: 12px;
 }
 html body #wrapper #loginScreen {
   margin-top: 150px;
+}
+html body #wrapper #loginScreen #einleitungsText {
+  padding: 10px;
 }
 html body #wrapper #loginScreen #einleitungsText p {
   color: #fff;
@@ -166,7 +234,6 @@ html #topCal .topShadow {
 }
 html #topCal #caldenderPerson {
   height: 100%;
-  max-width: 970px;
 }
 html #topCal #caldenderPerson .col-xs-3,
 html #topCal #caldenderPerson .col-xs-2 {

@@ -3,17 +3,15 @@
 include ("header.php");
 ?>
 
-
 <!-- Main Content -->
 <div id="topCal" class="container-fluid">
 	<div class="col-xs-12 topShadow"><img class="img-responsive center-block" src="img/shadow-top.png">
 	</div>
-	
-<!-- Menu -->
-	<?php
-include ("loginMenu.php");
-?>
 
+	<!-- Menu -->
+	<?php
+	include ("loginMenu.php");
+	?>
 </div>
 <div class="container" id="wrapper">
 	<div id="loginScreen">
@@ -30,28 +28,53 @@ include ("loginMenu.php");
 					<div class="panel-footer"></div>
 				</div>
 			</div>
-			<div id="einleitungsText">
+			<div id="einleitungsText" class="contentBox shadowOne">
+				 <div class="spoiler" data-spoiler-link="1"><strong>Was ist MeWe?</strong></div>
+				 <div class="spoiler-content" data-spoiler-link="1">	
 				<p>
-					<span class="aboutUs">MeWe</span>- ist ein Kalender, der dir den Tag einfacher gestaltet.
-				</p>
-				<p>
+					MeWe- ist ein Kalender der anderen Sorte.
+					Er zeigt dir nicht deine Termine an, sondern deine Zeit die noch nicht verplant ist. Durch diesen Kalender ist es einfacher einen überblick zu erhalten wann wer für dich Zeit hat.
 					Dieser Kalender findet Zeit in der du dich mit deiner Familie, deinen
-				</p>
-				<p>
 					Freunden oder auch Arbeitskollegen treffen kannst.
 				</p>
 				<p>
-					Das Prinzip ist einfach:
-				</p>
-				<p>
-					- melde dich mit deinem Googlekonto an
-				</p>
+			Das Prinzip ist einfach:
+			<ul>
+				<li>
+					melde dich mit deinem Googlekonto an.
+				</li>
+				<li>
+					Links ist die 24 Stunden Zeitleiste.
+				</li>
+				<li>
+					Die erste farbige Spalte zeigt dir deine freie Zeit an.
+				</li>
+				<li>
+					Lücken zeigen dir deine Termine an.
+				</li>
+				<li>
+					Die jeweiligen weitern farbigen Spalten sind die Personen die ihren Kalender für dich freigegeben haben.
+				</li>
+			</ul>
+		</p>
+		</div>
 			</div>
 		</div>
 	</div>
 </div>
+<script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+<script>
+	function redirectCheck(pageurl) {
+if (!window.location.href.endsWith(pageurl)) {
+window.location.href = pageurl;
+}
+}
 
-<!--Footer wird eingefügt-->
+$.getJSON("date.json", function(data2) {
+$('#zeiten').graspSchedule(data2);
+});
+
+
 <?php
 include ("footer.php");
 ?>

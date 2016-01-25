@@ -14,7 +14,7 @@ include ("header.php");
 	include ("mainMenu.php");
 	?>
 
-	<div id="caldenderPerson" class="container-fluid">
+	<div id="caldenderPerson" class="container">
 		<div class="row">
 			<div class="col-xs-3 col-xs-offset-3">
 				<span class="img-circle center-block personOne" aria-hidden="true"> <span class="glyphicon glyphicon-user personImage" aria-hidden="true"></span> </span>
@@ -60,6 +60,19 @@ include ("header.php");
 		</div>
 	</div>
 </div>
+
+<script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+<script>
+	function redirectCheck(pageurl) {
+		if (!window.location.href.endsWith(pageurl)) {
+			window.location.href = pageurl;
+		}
+	}
+	    
+	$.getJSON("date.json", function(data2) {
+		$('#zeiten').graspSchedule(data2);
+	});
+
 <!-- Footer wird eingefügt-->
 <?php
 include ("footer.php");
