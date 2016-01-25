@@ -4,24 +4,24 @@
 
 <div id="sidr">
 	<header id="menuHeader">
-		<h1>Demos &amp; Usage</h1>
+		<h1>Menü</h1>
 	</header>
 
 	<div id="menuContent">
 		<p>
-			Here are described differents ways of usage for this plugin, you can read and adapt them to your website's requeriments. Below are described all options with details.
+			Logge dich jetzt ein um den vollem Umfang von MeWe zu nutzen.
 		</p>
 	</div>
 	<!-- Your content -->
 	<ul>
 		<li>
-			<a href="#">List 1</a>
+			<a href="index.php">Login</a>
 		</li>
 		<li>
-			<a href="#">List 2</a>
+			<a href="helpLogin.php">Hilfe</a>
 		</li>
 		<li>
-			<a href="#">List 3</a>
+			<a href="impressumLogin.php">Impressum</a>
 		</li>
 	</ul>
 </div>
