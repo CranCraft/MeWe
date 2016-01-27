@@ -14,9 +14,11 @@ include ("header.php");
 	include ("mainMenu.php");
 	?>
 
-	<div id="caldenderPerson" class="container-fluid">
+	<div id="caldenderPerson" class="container-fluid pageHeader">
 		<div class="row">
-
+			<div id="logoMain" class="col-sm-2 col-xs-2">
+				<img class="img-responsive center-block" src="img/icon/logo.png">
+			</div>
 		</div>
 	</div>
 
@@ -61,17 +63,17 @@ include ("header.php");
 						<input type="checkbox" value="" disabled>
 						Handy Benachrichtigungen (comming soon) </label>
 				</div>
-				<h3>h1. Bootstrap heading</h3>
+				<h3>Example</h3>
 				<hr>
 				<div class="radio">
 					<label>
 						<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-						Option one is this and that&mdash;be sure to include why it's great </label>
+						Option 1 </label>
 				</div>
 				<div class="radio">
 					<label>
 						<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-						Option two can be something else and selecting it will deselect option one </label>
+						Option 2 </label>
 				</div>
 				<h3>Benutzer Management</h3>
 				<hr>

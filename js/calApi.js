@@ -1,9 +1,12 @@
       // Your Client ID can be retrieved from your project in the Google
       // Developer Console, https://console.developers.google.com
       var CLIENT_ID = '848318626401-4lo2eghrkim2vlspiogv033v3or728og.apps.googleusercontent.com';
+      
+      var E_MAIL = "felixohlsen0@gmail.com";
 
       var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
-
+ 	  
+ 	  
       /**
        * Check if current user has authorized this application.
        */
@@ -85,7 +88,7 @@
 
         request.execute(function(resp) {
           var events = resp.items;
-          appendPre('Upcoming events:');
+          //appendPre('Upcoming events:');
 
           if (events.length > 0) {
             for (i = 0; i < events.length; i++) {
@@ -94,13 +97,29 @@
               if (!when) {
                 when = event.start.date;
               }
-              appendPre(event.summary + ' (' + when + ')')
+              //appendPre(event.summary + ' (' + when + ')');
             }
           } else {
-            appendPre('No upcoming events found.');
+            //appendPre('No upcoming events found.');
           }
 
         });
+      
+      	// ------------------------ Free Busy ----------------------
+	      var request2 = gapi.client.calendar.freebusy.query({
+	        "kind": "calendar#freeBusy",
+	        "timeMin": "2016-01-12T01:00:10.256Z",
+	        "timeMax": "2016-01-30T23:00:10.256Z",
+	        "timeZone": "Europe/Berlin",
+	        "items": [{
+	          id: "felixohlsen0@gmail.com"
+	        }]
+	      });
+	
+	      request2.execute(function(result) {
+	        console.log(result);
+	      });
+      
       }
 
       /**
@@ -108,9 +127,10 @@
        * as its text node.
        *
        * @param {string} message Text to be placed in pre element.
-       */
+       
       function appendPre(message) {
         var pre = document.getElementById('output');
         var textContent = document.createTextNode(message + '\n');
         pre.appendChild(textContent);
       }
+      */

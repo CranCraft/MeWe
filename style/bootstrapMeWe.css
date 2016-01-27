@@ -6,6 +6,8 @@
 ######## Jahr: 2015
 #######################
 */
+/* Schriftarten */
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700,300&subset=latin,greek,cyrillic-ext,latin-ext,cyrillic);
 /* Variabeln */
 /* Effekte */
 /* Grow */
@@ -105,6 +107,16 @@ html a :hover {
 html body {
   background: #000000 url("../img/bg.jpg") repeat-x fixed !important;
   height: 100%;
+  font-family: 'Comfortaa', cursive;
+}
+html body p,
+html body a,
+html body h1 {
+  font-family: 'Comfortaa', cursive;
+}
+html body #mainUeberschrift img {
+  max-width: 30px;
+  height: auto;
 }
 html body .menuButton {
   position: absolute;
@@ -169,6 +181,11 @@ html body #wrapper #loginBox .btn-default {
   border-radius: 0px;
   border: none;
 }
+html body #wrapper #loginBox #loginLogo {
+  max-height: 64px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
 html body #mainCalendar #botCal table {
   margin-bottom: 1px;
 }
@@ -177,13 +194,19 @@ html body #mainCalendar #botCal table tr {
 }
 html body #mainCalendar #botCal table th {
   border: none;
+  padding: 15px;
 }
 html body #mainCalendar #botCal table td {
   border: none;
+  padding: 15px;
 }
 html body #mainCalendar #botCal .timeList {
   background-color: rgba(255, 255, 255, 0.3);
   padding-top: 15px;
+}
+html body #mainCalendar #botCal .timeList td,
+html body #mainCalendar #botCal .timeList th {
+  text-align: center;
 }
 html body #mainCalendar #botCal #tableMe {
   background-color: transparent;
@@ -231,8 +254,18 @@ html #topCal .topShadow {
   top: 2px;
   z-index: -1;
 }
+html #topCal h2 {
+  font-weight: 700;
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 18px;
+}
 html #topCal #caldenderPerson {
   height: 100%;
+}
+html #topCal #caldenderPerson img {
+  max-height: 40px;
+  margin-top: 19px;
 }
 html #topCal #caldenderPerson .col-xs-3,
 html #topCal #caldenderPerson .col-xs-2 {
@@ -269,11 +302,24 @@ html #topCal #caldenderPerson .col-xs-2 .glyphicon {
 }
 /* testest */
 @media (max-width: 766px) {
+  html body {
+    font-size: 13px;
+  }
+  html h1 {
+    font-size: 23px;
+  }
+  html h2 {
+    font-size: 25px;
+    margin-top: 10px;
+  }
   html #topCal {
     height: 60px;
   }
   html #topCal .menuButton img {
     height: 25px;
+  }
+  html #topCal .topShadow {
+    top: 2px;
   }
   html #topCal #caldenderPerson .col-xs-3 > span,
   html #topCal #caldenderPerson .col-xs-2 > span {
@@ -302,6 +348,37 @@ html #topCal #caldenderPerson .col-xs-2 .glyphicon {
     margin-top: 6px;
     margin-left: 8px;
     color: black;
+  }
+  html body #mainCalendar #botCal table tr {
+    height: 25px;
+    padding-top: 2.5px;
+  }
+  html body #mainCalendar #botCal table th,
+  html body #mainCalendar #botCal table td {
+    padding: 0px;
+    padding-top: 2.5px;
+  }
+  html body #mainCalendar #botCal .timeList {
+    padding: 0px;
+    margin-top: 15px;
+  }
+  html body #mainCalendar #botCal .timeList td {
+    padding: 0px;
+    padding-top: 3px;
+  }
+  html #logoMain {
+    padding: 0px;
+    padding-left: 5px;
+  }
+  html #topCal #caldenderPerson img {
+    max-height: 25px;
+    margin-top: 16px;
+  }
+  html body #wrapper #loginScreen {
+    margin-top: 50px;
+  }
+  html #caldenderPerson.pageHeader .row #logoMain img {
+    max-height: 25px;
   }
 }
 

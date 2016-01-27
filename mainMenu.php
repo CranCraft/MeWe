@@ -1,5 +1,6 @@
 <script src="jquery/mainMenu.js"></script>
 
+
 <a id="mainMenu" class="menuButton hvr-grow" href="#mainMenu"><img src="img/menuIcone.png" tabindex="1"></a>
 
 <div id="sidr">
@@ -19,7 +20,7 @@
 			$zitat[] = "Überwinde dich selbst und du wirst die Welt überwinden.";
 			$zitat[] = "Als Gott den Menschen erschuf, war er bereits m&uuml;de; das erkl&auml;rt manches. - Mark Twain";
 			$zitat[] = "\"Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit, aber bei dem Universum bin ich mir noch nicht ganz sicher.\" - Albert Einstein";
-			
+
 			$zufall = array_rand($zitat);
 			echo "<b>Zitat:</b> " . $zitat[$zufall];
 			?>
@@ -32,12 +33,15 @@
 		</li>
 		<li>
 			<a href="settings.php">Einstellungen</a>
-		</li>		
+		</li>
 		<li>
 			<a href="help.php">Hilfe</a>
 		</li>
 		<li>
 			<a href="impressum.php">Impressum</a>
+		</li>
+		<li>
+			<a href="jasonTest.php">Jason Objekt</a>
 		</li>
 		<li>
 			<!--<a href="#" onclick="signOut();">Sign out</a>-->

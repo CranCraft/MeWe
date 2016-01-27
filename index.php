@@ -4,7 +4,10 @@ include ("header.php");
 ?>
 
 <!-- Main Content -->
-<div id="topCal" class="container-fluid">
+<div id="topCal" class="container-fluid pageHeader">
+	<div class="col-xs-12">
+		<h2 class="text-center">MeWe</h2>
+	</div>
 	<div class="col-xs-12 topShadow"><img class="img-responsive center-block" src="img/shadow-top.png">
 	</div>
 
@@ -20,7 +23,8 @@ include ("header.php");
 				<div class="panel panel-info">
 					<div class="panel-heading"></div>
 					<div class="panel-body">
-						<img class="img-responsive center-block" src="https://www.gstatic.com/images/icons/material/product/2x/calendar_64dp.png">
+						<!--<img class="img-responsive center-block" src="https://www.gstatic.com/images/icons/material/product/2x/calendar_64dp.png">-->
+						<img id="loginLogo" class="img-responsive center-block" src="img/icon/logo.png">
 						<button id="authorize-button" onclick="handleAuthClick(event)" class="btn btn-default btn-block hvr-grow">
 							Los geht`s
 						</button>
@@ -65,14 +69,10 @@ include ("header.php");
 <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 <script>
 	function redirectCheck(pageurl) {
-if (!window.location.href.endsWith(pageurl)) {
-window.location.href = pageurl;
-}
-}
-
-$.getJSON("date.json", function(data2) {
-$('#zeiten').graspSchedule(data2);
-});
+		if (!window.location.href.endsWith(pageurl)) {
+			window.location.href = pageurl;
+		}
+	}
 
 
 <?php

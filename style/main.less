@@ -7,6 +7,9 @@
 #######################
 */
 
+/* Schriftarten */
+
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700,300&subset=latin,greek,cyrillic-ext,latin-ext,cyrillic);
 
 /* Variabeln */
 
@@ -140,11 +143,20 @@ html {
     body {
         background: #000 url("../img/bg.jpg") repeat-x fixed !important;
         height: 100%;
-        
+        font-family: 'Comfortaa', cursive;
+        p, a, h1 {
+            font-family: 'Comfortaa', cursive;    
+        }
         #loginMenu{
             //position: fixed;    
         }
-        
+        #mainUeberschrift {
+            img {
+                max-width: 30px;
+                height: auto;
+                
+            }
+        }
         .menuButton {
             position: absolute;
             right: 12px;
@@ -211,6 +223,11 @@ html {
                     border-radius: 0px;
                     border: none;
                 }
+                #loginLogo {
+                max-height: 64px;
+                margin-top: 20px;
+                margin-bottom: 35px;
+            }
             }
         }
         #mainCalendar {
@@ -224,14 +241,19 @@ html {
                     }
                     th {
                         border: none;
+                        padding: 15px;
                     }
                     td {
                         border: none;
+                        padding: 15px;
                     }
                 }
                 .timeList {
                     background-color: rgba(255, 255, 255, 0.3) ; 
                     padding-top: 15px;
+                    td, th {
+                       text-align: center;   
+                    }
                  
                 }
                 #tableMe {
@@ -286,9 +308,19 @@ html {
                 top: 2px;
                 z-index: -1;
             }
+            h2 {
+                font-weight: 700;
+                font-size: 36px;
+                color: #fff;
+                margin-bottom: 18px;
+            }
             #caldenderPerson {
                 height: 100%;
                 //max-width: 970px;
+                img {
+                    max-height: 40px;
+                    margin-top: 19px;
+                }
                 .col-xs-3, .col-xs-2 {
                     height: 100%;
                     > span {

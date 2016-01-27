@@ -1,16 +1,19 @@
+<!-- Sticky Leiste  -->
 $(window).load(function(){
 $("#topCal").sticky({ topSpacing: 0 });
 });
 
+<!-- Log out -->
 function signOut() {
 var auth2 = gapi.auth2.getAuthInstance();
 auth2.signOut().then(function() {
 console.log('User signed out.');
 });
 }
-
+<!-- Startseite MeWe Spoiler -->
   $(".spoiler").spoiler();
-  
+ 
+ <!-- Sortieren Einstellungen -->
 $("ol.simple_with_animation").sortable({
   group: 'simple_with_animation',
   pullPlaceholder: false,

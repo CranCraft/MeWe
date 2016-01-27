@@ -9,7 +9,7 @@
 
 	<div id="menuContent">
 		<p>
-			Logge dich jetzt ein um den vollem Umfang von MeWe zu nutzen.
+			Logge dich jetzt ein um den vollen Umfang von MeWe zu nutzen.
 		</p>
 	</div>
 	<!-- Your content -->

@@ -14,9 +14,11 @@ include ("header.php");
 	include ("mainMenu.php");
 	?>
 
-	<div id="caldenderPerson" class="container-fluid">
+	<div id="caldenderPerson" class="container-fluid pageHeader">
 		<div class="row">
-
+			<div id="logoMain" class="col-sm-2 col-xs-2">
+				<img class="img-responsive center-block" src="img/icon/logo.png">
+			</div>
 		</div>
 	</div>
 
@@ -74,7 +76,6 @@ include ("header.php");
 	</div>
 </div>
 <!-- Footer wird eingefügt-->
-<script>
-<?php
+<script><?php
 include ("footer.php");
 ?>
